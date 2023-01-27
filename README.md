@@ -25,3 +25,5 @@ Please prepare beforehand.
 (3.1) Basics of Data Visualization
 
 You will find this in the tutorial folder on github.
+
+## For more resources have a look at this page. ([link](https://github.com/ccs-amsterdam/r-course-material))
