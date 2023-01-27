@@ -8,7 +8,7 @@ The course material can be accessed here: https://github.com/EmmaDiel/HP-Big-Dat
 
 (1.2) R Text Analysis Quanteda 
 
-You will find this tutorial in the overview on github.
+You will find this tutorial in the tutorial folder on github.
 
 ## For the second workgroup session
 (2.1) Exploratory Text Analysis *please prepare beforehand
@@ -20,7 +20,7 @@ You will find this tutorial in the overview on github.
 ## For the third workgroup session
 (3) Basics of Data Visualization
 
-You will find this tutorial in the overview on github.
+You will find this tutorial in the tutorial folder on github.
 
 
 
