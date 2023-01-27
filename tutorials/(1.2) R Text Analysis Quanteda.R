@@ -319,5 +319,5 @@ To check this, you can manually annotate or code a sample of documents and compa
 You can also apply the keyword-in-context function to a dictionary to quickly check a set of matches and see if they make sense:
 
 ```{r}
-kwic(corp, dict$terrorism)
+kwic(corp, dict$terrorism) 
 ```
