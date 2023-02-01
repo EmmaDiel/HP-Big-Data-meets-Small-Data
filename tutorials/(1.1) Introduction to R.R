@@ -5,9 +5,9 @@ author: "Kasper Welbers"
 output:
   pdf_document:
   toc: true
-number_sections: true
-toc_depth: 1
-editor_options:
+  number_sections: true
+  toc_depth: 1
+  editor_options:
   chunk_output_type: console
 ---
   
