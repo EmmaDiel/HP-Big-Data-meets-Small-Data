@@ -11,7 +11,7 @@ output:
   chunk_output_type: console
 ---
   
-  ```{r opts, echo = FALSE}
+```{r opts, echo = FALSE}
 knitr::opts_chunk$set(message=FALSE, warning=FALSE, fig.path = "img/")
 ```
 
