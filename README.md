@@ -6,6 +6,8 @@ Here you can find the material used in the workgroup sessions for the Honors pro
 
 (1.1) Introduction to R ([link](https://htmlpreview.github.io/?https://github.com/mzamani2/R-for-BDSM/blob/main/tutorials/Introduction_to_R.html))
 
+(1.1) Introduction to R ([link](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/-1.1--Introductio-to-R.html))
+
 Please prepare beforehand.
 
 (1.2) R Text Analysis Quanteda
