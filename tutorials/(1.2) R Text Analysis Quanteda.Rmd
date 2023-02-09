@@ -1,5 +1,6 @@
 ---
-  title: 'R text analysis: quanteda'
+title: "Big Data meets Small Data"
+subtitle: 'R text analysis: quanteda'
 author: "Kasper Welbers, Wouter van Atteveldt & Philipp Masur"
 date: "2021-10"
 output: 
@@ -9,8 +10,7 @@ editor_options:
   chunk_output_type: console
 ---
   
-  
-  ```{r setup, include=FALSE}
+```{r setup, include=FALSE}
 ## include this at top of your RMarkdown file for pretty output
 ## make sure to have the printr package installed: install.packages('printr')
 knitr::opts_chunk$set(echo = TRUE, results = FALSE, message = FALSE, warning = FALSE, fig.keep='none')
