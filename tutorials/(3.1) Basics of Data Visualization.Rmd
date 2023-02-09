@@ -3,9 +3,8 @@ title: "Basics of Data Visualization"
 author: "Kasper Welbers, Wouter van Atteveldt & Philipp Masur"
 date: "2021-10"
 output: 
-  #github_document:
-   pdf_document:
-    toc: yes
+  github_document:
+    toc: true
 editor_options: 
   chunk_output_type: console
 ---
