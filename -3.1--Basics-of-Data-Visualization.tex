@@ -1,0 +1,628 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Basics of Data Visualization},
+  pdfauthor={Kasper Welbers, Wouter van Atteveldt \& Philipp Masur},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Basics of Data Visualization}
+\author{Kasper Welbers, Wouter van Atteveldt \& Philipp Masur}
+\date{2021-10}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+This tutorial teaches the basics of data visualization using the
+\texttt{ggplot2} package (included in the \texttt{tidyverse}). For more
+information, see
+\href{http://r4ds.had.co.nz/data-visualisation.html}{R4DS Chapter 3:
+Data Visualization} and
+\href{http://r4ds.had.co.nz/exploratory-data-analysis.html}{R4DS Chapter
+7: Exploratory Data Analysis}.
+
+For \emph{many} cool visualization examples using \texttt{ggplot2} (with
+R code included!) see the
+\href{https://www.r-graph-gallery.com/portfolio/ggplot2-package/}{R
+Graph Gallery}. For inspiration (but unfortunately no R code), there is
+also a
+\href{https://fivethirtyeight.com/features/the-52-best-and-weirdest-charts-we-made-in-2016/}{538
+blog post on data visualization from 2016}. Finally, see the article on
+`\href{http://vita.had.co.nz/papers/layered-grammar.html}{the grammar of
+graphics}' published by Hadley Wickham for more insight into the ideas
+behind ggplot.
+
+\hypertarget{a-basic-ggplot-plot}{%
+\section{A basic ggplot plot}\label{a-basic-ggplot-plot}}
+
+\hypertarget{loading-packages-and-data}{%
+\subsection{Loading packages and data}\label{loading-packages-and-data}}
+
+Suppose that we want to see the relation between college education and
+household income, both included in the \texttt{county\ facts} subset
+published by
+\href{https://github.com/houstondatavis/data-jam-august-2016}{Houston
+Data Visualisation github page}.
+
+(If you want to practice downloading a data set into a folder and
+loading it from there: you can find the data set on Canvas as well. Bear
+in mind to set the working directory correctly).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Load package collection}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+
+\CommentTok{\# Download data}
+\NormalTok{csv\_folder\_url }\OtherTok{\textless{}{-}} \StringTok{"https://raw.githubusercontent.com/houstondatavis/data{-}jam{-}august{-}2016/master/csv"}  \CommentTok{\# URL to folder }
+\NormalTok{facts }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{paste}\NormalTok{(csv\_folder\_url, }\StringTok{"county\_facts.csv"}\NormalTok{, }\AttributeTok{sep =} \StringTok{"/"}\NormalTok{)) }\CommentTok{\# pasting folder path and file name together}
+\NormalTok{facts}
+\end{Highlighting}
+\end{Shaded}
+
+Since this data set contains a large amount of columns, we keep only a
+subset of columns for now:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Selecting columns and filtering }
+\NormalTok{facts\_state }\OtherTok{\textless{}{-}}\NormalTok{ facts }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(fips, area\_name, state\_abbreviation, }
+         \AttributeTok{population =}\NormalTok{ Pop\_2014\_count, }
+         \AttributeTok{pop\_change =}\NormalTok{ Pop\_change\_pct,}
+         \AttributeTok{over65 =}\NormalTok{ Age\_over\_65\_pct, }
+         \AttributeTok{female =}\NormalTok{ Sex\_female\_pct,}
+         \AttributeTok{white =}\NormalTok{ Race\_white\_pct,}
+         \AttributeTok{college =}\NormalTok{ Pop\_college\_grad\_pct, }
+         \AttributeTok{income =}\NormalTok{ Income\_per\_capita) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(state\_abbreviation) }\SpecialCharTok{\&}\NormalTok{ fips }\SpecialCharTok{!=} \DecValTok{0}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{state\_abbreviation)}
+
+\CommentTok{\# Check results}
+\NormalTok{facts\_state}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{building-a-layered-visualization}{%
+\subsection{Building a layered
+visualization}\label{building-a-layered-visualization}}
+
+Now, let's make a simple \emph{scatter plot} with percentage
+college-educated on the x-axis and median income on the y-axis. First,
+we can used the function \texttt{ggplot} to create an empty canvas tied
+to the dataset \texttt{facts\_state} and tell the function which
+variables to use:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state,        }\DocumentationTok{\#\# which data set?}
+       \FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{college, }\AttributeTok{y=}\NormalTok{income))  }\DocumentationTok{\#\# which variables as aesthetics?}
+\end{Highlighting}
+\end{Shaded}
+
+Next, we need to tell ggplot what to plot. In this case, we want to
+produce a scatterplot. The function \texttt{geom\_point} adds a layer of
+information to the canvas. In the language of ggplot, each layer has a
+\emph{geometrical representation}, in this case ``points''. In this
+case, the ``x'' and ``y'' are mapped to the college and income columns.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state,}
+       \AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{()   }\DocumentationTok{\#\# adding the geometrical representation}
+\end{Highlighting}
+\end{Shaded}
+
+The result is a plot where each point here represents a state, and we
+see a clear correlation between education level and income. There is one
+clear outlier on the top-right. Can you guess which state that is?
+
+So called \emph{aesthetic mappings}, which map the visual elements of
+the geometry to columns of the data, can also be included as argument in
+the \texttt{geom} itself and not in the \texttt{ggplot()?} command. This
+can be handy when several \texttt{geoms} are plotted and different
+aesthetics are used. For example, we can add more \texttt{geoms} to the
+plot (e.g., a regression line). If we provided the aesthetics within the
+\texttt{ggplot}-function, these are passed automatically to the
+following \texttt{geoms}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Linear regression line}
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state, }
+       \AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method =} \StringTok{"lm"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{important-note-on-ggplot-command-syntax}{%
+\subsection{Important note on ggplot command
+syntax}\label{important-note-on-ggplot-command-syntax}}
+
+For the plot to work, R needs to execute the whole ggplot call and all
+layers as a single statement. Practically, that means that if you
+combine a plot over multiple lines, the plus sign needs to be at the end
+of the line, so R knows more is coming.
+
+So, the following is good:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state,}
+       \AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+But this is not:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state,}
+       \AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income)) }
+  \SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+We can also move the mappings to the \texttt{geom}. This can be useful
+when we want to plot different \texttt{geoms} based on different
+variables.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# same as above}
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income))}
+\end{Highlighting}
+\end{Shaded}
+
+Also note that the data and mapping arguments are always the first
+arguments the functions expect, so you can also call them implicitly:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(facts\_state) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{other-aesthetics}{%
+\subsection{Other aesthetics}\label{other-aesthetics}}
+
+To find out which visual elements can be used in a layer, use
+e.g.~\texttt{?geom\_point}. According to the help file, we can (among
+others) set the colour, alpha (transparency), and size of points. Let's
+first set the size of points to the population of each state, creating a
+bubble plot:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income, }\AttributeTok{size =}\NormalTok{ population))}
+\end{Highlighting}
+\end{Shaded}
+
+Since it is difficult to see overlapping points, let's make all points
+somewhat transparent. Note: Since we want to set the alpha of all points
+to a single value, this is not a mapping (as it is not mapped to a
+column from the data frame), but a constant. These are set outside the
+mapping argument:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income, }\AttributeTok{size =}\NormalTok{ population), }
+             \AttributeTok{alpha =}\NormalTok{ .}\DecValTok{5}\NormalTok{, }
+             \AttributeTok{colour =} \StringTok{"red"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Instead of setting colour to a constant value, we can also let it vary
+with the data. For example, we can colour the states by percentage of
+population above 65:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income, }\AttributeTok{size =}\NormalTok{ population, }\AttributeTok{colour =}\NormalTok{ over65), }
+             \AttributeTok{alpha =}\NormalTok{ .}\DecValTok{9}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Finally, you can map to a categorical value as well. Let's categorize
+states into whether population is growing (at least 1\%) or stable or
+declining. We use the \texttt{if\_else(condition,\ iftrue,\ iffalse)}
+function, which assigns the \texttt{iftrue} value if the condition is
+true, and \texttt{iffalse} otherwise:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Creating a new variable}
+\NormalTok{facts\_state }\OtherTok{\textless{}{-}}\NormalTok{ facts\_state }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{growth =} \FunctionTok{ifelse}\NormalTok{(pop\_change }\SpecialCharTok{\textgreater{}} \DecValTok{1}\NormalTok{, }\StringTok{"Growing"}\NormalTok{, }\StringTok{"Stable"}\NormalTok{))}
+
+\CommentTok{\# Plotting a categorical variable}
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{facts\_state) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ college, }\AttributeTok{y =}\NormalTok{ income, }\AttributeTok{size =}\NormalTok{ population, }\AttributeTok{colour =}\NormalTok{ growth), }
+             \AttributeTok{alpha=}\NormalTok{.}\DecValTok{9}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+As you can see in these examples, ggplot tries to be smart about the
+mapping you ask. It automatically sets the x and y ranges to the values
+in your data. It mapped the size such that there are small and large
+points, but not e.g.~a point so large that it would dominate the graph.
+For the colour, for interval variables it created a colour scale, while
+for a categorical variable it automatically assigned a colour to each
+group.
+
+Of course, each of those choices can be customized, and sometimes it
+makes a lot of sense to do so. For example, you might wish to use red
+for republicans and blue for democrats, if your audience is used to
+those colors; or you may wish to use grayscale for an old-fashioned
+paper publication. We'll explore more options in a later tutorial, but
+for now let's be happy that ggplot does a lot of work for us!
+
+\textbf{Exercise 1:} Of course there are more types of plots. Try to
+plot a so-called ``histogram'' of the variable \texttt{income}.
+Histograms are really helpful to understand the distribution of a
+variable. Tip: Check out the help page by calling
+\texttt{?geom\_histogram}. The first example will help you build the
+right plot. In a second step, simply exchange \texttt{geom\_histogram()}
+with \texttt{geom\_density()}. What do you see now?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Solution here}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{bar-plots}{%
+\section{Bar plots}\label{bar-plots}}
+
+Another frequently used plot is the bar plot. By default, R bar plots
+assume that you want to plot a histogram, e.g.~the number of occurences
+of each group. As a very simple example, the following plots the number
+of states that are growing or stable in population:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ facts\_state) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ growth))}
+\end{Highlighting}
+\end{Shaded}
+
+For a more interesting plot, let's plot the votes per Republican
+candidate in the New Hampshire primary. First, we need to download the
+per-county data, summarize it per state, and filter to only get the NH
+results for the Republican party: (see the previous tutorials on
+\href{R-tidy-5-transformation.md}{Data Transformations} and
+\href{R-tidy-13a-joining.md}{Joining data} for more information if
+needed)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Getting new data}
+\NormalTok{results\_state }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{paste}\NormalTok{(csv\_folder\_url, }\StringTok{"primary\_results.csv"}\NormalTok{, }\AttributeTok{sep =} \StringTok{"/"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(state, party, candidate) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{votes=}\FunctionTok{sum}\NormalTok{(votes))}
+
+\CommentTok{\# Subset of New Hampshire and republican candidates}
+\NormalTok{nh\_gop }\OtherTok{\textless{}{-}}\NormalTok{ results\_state }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(state }\SpecialCharTok{==} \StringTok{"New Hampshire"} \SpecialCharTok{\&}\NormalTok{ party }\SpecialCharTok{==} \StringTok{"Republican"}\NormalTok{)}
+\NormalTok{nh\_gop}
+\end{Highlighting}
+\end{Shaded}
+
+Now, let's make a bar plot with votes (y) per candidate (x). Since we
+don't want ggplot to summarize it for us (we already did that
+ourselves), we set \texttt{stat="identity"} to set the grouping
+statistic to the identity function, i.e.~just use each point as it is.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# We can also store parts of a plot in an object}
+\NormalTok{plot1 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(nh\_gop) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{candidate, }\AttributeTok{y=}\NormalTok{votes), }
+           \AttributeTok{stat=}\StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{)}
+\NormalTok{plot1}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{setting-graph-options}{%
+\subsection{Setting graph options}\label{setting-graph-options}}
+
+Some options, like labels, legends, and the coordinate system are
+graph-wide rather than per layer. You add these options to the graph by
+adding extra functions to the call. For example, we can use
+coord\_flip() to swap the x and y axes:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{plot1 }\SpecialCharTok{+} 
+  \FunctionTok{coord\_flip}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+You can also reorder categories with the \texttt{reorder} function, for
+example to sort by number of votes. Also, let's add some colour (just
+because we can!):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(nh\_gop) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{reorder}\NormalTok{(candidate, votes), }\AttributeTok{y =}\NormalTok{ votes, }\AttributeTok{fill =}\NormalTok{ candidate), }
+           \AttributeTok{stat =} \StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{coord\_flip}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+This is getting somewhere, but the x-axis label (y-axis after rotation)
+is not very pretty and we don't need guides for the fill mapping. This
+can be remedied by more graph-level options. Also, we can use a
+\texttt{theme} to alter the appearance of the graph, for example using
+the minimal theme:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(nh\_gop) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{reorder}\NormalTok{(candidate, votes), }\AttributeTok{y =}\NormalTok{ votes, }\AttributeTok{fill =}\NormalTok{ candidate), }
+           \AttributeTok{stat =} \StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{coord\_flip}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Candidate"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.position =} \StringTok{"none"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{grouped-bar-plots}{%
+\subsection{Grouped bar plots}\label{grouped-bar-plots}}
+
+We can also add groups to bar plots. For example, we can set the x
+category to state (taking only NH and IA to keep the plot readable), and
+then group by candidate:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{gop2 }\OtherTok{\textless{}{-}}\NormalTok{ results\_state }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(party }\SpecialCharTok{==} \StringTok{"Republican"} \SpecialCharTok{\&}\NormalTok{ (state }\SpecialCharTok{==} \StringTok{"New Hampshire"} \SpecialCharTok{|}\NormalTok{ state }\SpecialCharTok{==} \StringTok{"Iowa"}\NormalTok{)) }
+
+\FunctionTok{ggplot}\NormalTok{(gop2) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ state, }\AttributeTok{y =}\NormalTok{ votes, }\AttributeTok{fill =}\NormalTok{ candidate), }
+           \AttributeTok{stat=}\StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+By default, the groups are stacked. This can be controlled with the
+position parameter, which can be \texttt{dodge} (for grouped bars) or
+\texttt{fill} (stacking to 100\%):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(gop2) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{state, }\AttributeTok{y=}\NormalTok{votes, }\AttributeTok{fill=}\NormalTok{candidate), }
+           \AttributeTok{stat=}\StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{, }
+           \AttributeTok{position=}\StringTok{\textquotesingle{}dodge\textquotesingle{}}\NormalTok{)}
+\FunctionTok{ggplot}\NormalTok{(gop2) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{state, }\AttributeTok{y=}\NormalTok{votes, }\AttributeTok{fill=}\NormalTok{candidate), }
+           \AttributeTok{stat=}\StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{, }
+           \AttributeTok{position=}\StringTok{\textquotesingle{}fill\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{line-plots}{%
+\section{Line plots}\label{line-plots}}
+
+Finally, another frequent graph is the line graph. For example, we can
+plot the ascendancy of Donald Trump by looking at his vote share over
+time. First, we combine the results per state with the primary schedule:
+(see the tutorial on \href{R-tidy-13a-joining.md}{Joining data})
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# dataset 1}
+\NormalTok{schedule  }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{paste}\NormalTok{(csv\_folder\_url, }\StringTok{"primary\_schedule.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"/"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{date =} \FunctionTok{as.Date}\NormalTok{(date, }\AttributeTok{format=}\StringTok{"\%m/\%d/\%y"}\NormalTok{))}
+\NormalTok{schedule}
+
+\CommentTok{\# dataset 2}
+\NormalTok{trump }\OtherTok{\textless{}{-}}\NormalTok{ results\_state }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(state, party) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{vote\_prop=}\NormalTok{votes}\SpecialCharTok{/}\FunctionTok{sum}\NormalTok{(votes)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(candidate}\SpecialCharTok{==}\StringTok{"Donald Trump"}\NormalTok{)}
+\NormalTok{trump}
+
+\CommentTok{\# join the two data sets (more next sessions)}
+\NormalTok{trump }\OtherTok{\textless{}{-}} \FunctionTok{left\_join}\NormalTok{(trump, schedule) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(date) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{vote\_prop =} \FunctionTok{mean}\NormalTok{(vote\_prop))}
+\NormalTok{trump}
+\end{Highlighting}
+\end{Shaded}
+
+Take a minute to inspect the code above, and try to understand what each
+line does! The best way to do this is to inspect the output of each
+line, and trace back how that output is computed based on the input
+data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(trump) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_line}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ date, }\AttributeTok{y =}\NormalTok{ vote\_prop))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{multiple-faceted-plots}{%
+\section{Multiple `faceted' plots}\label{multiple-faceted-plots}}
+
+Just to show off some of the possibilities of ggplot, let's make a plot
+of all republican primary outcomes on Super Tuesday (March 1st):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{super }\OtherTok{\textless{}{-}}\NormalTok{ results\_state }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{left\_join}\NormalTok{(schedule) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(party }\SpecialCharTok{==} \StringTok{"Republican"} \SpecialCharTok{\&}\NormalTok{ date }\SpecialCharTok{==} \StringTok{"2016{-}03{-}01"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(state) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{vote\_prop =}\NormalTok{ votes}\SpecialCharTok{/}\FunctionTok{sum}\NormalTok{(votes))}
+
+\FunctionTok{ggplot}\NormalTok{(super) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ candidate, }\AttributeTok{y =}\NormalTok{ vote\_prop), }
+           \AttributeTok{stat =} \StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{state, }\AttributeTok{nrow =} \DecValTok{3}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{coord\_flip}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Note \textsubscript{facet\_wrap} wraps around a single facet. You can
+also use \textasciitilde facet\_grid() to specify separate variables for
+rows and columns.
+
+\textbf{Exercise 2:} How could we change the plot to color the bars
+according to the candidates?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Solution here}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{themes}{%
+\section{Themes}\label{themes}}
+
+Customization of things like background colour, grid colour etc. is
+handled by themes. \texttt{ggplot} has two built-in themes:
+\texttt{theme\_grey} (default) and \texttt{theme\_bw} (for a more
+minimal theme with white background). The package ggthemes has some more
+themes, including an `economist' theme (based on the newspaper). To use
+a theme, simply add it to the plot:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggthemes)}
+\FunctionTok{ggplot}\NormalTok{(trump) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_line}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ date, }\AttributeTok{y =}\NormalTok{ vote\_prop)) }\SpecialCharTok{+} 
+  \FunctionTok{theme\_economist}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{""}\NormalTok{, }\AttributeTok{y =} \StringTok{"Percentage that voted for Trump"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Some links for learning more about themes:
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://ggplot2.tidyverse.org/reference/theme.html}
+\item
+  \url{https://www.datanovia.com/en/blog/ggplot-themes-gallery}
+\item
+  \url{http://rstudio-pubs-static.s3.amazonaws.com/284329_c7e660636fec4a42a09eed968dc47f32.html}
+\end{itemize}
+
+\end{document}
