@@ -4,7 +4,8 @@ subtitle: 'R text analysis: quanteda'
 author: "Kasper Welbers, Wouter van Atteveldt & Philipp Masur"
 date: "2021-10"
 output: 
-  github_document:
+  #github_document:
+  html_document:
   toc: yes
 editor_options: 
   chunk_output_type: console
