@@ -11,33 +11,40 @@ Before our first practical session, ensure you downloaded RStudio on your laptop
 * [R Basics](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/Preparation/R-basics---Getting-started.md)
 
 
-## Week 5
+## Week 5 - Getting started
 
 ### Topic: Basic Introduction to RStudio
 * Handout: 
-  + (1.1) [Introduction to R](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.1--Introduction-to-R.html)
+  + [Introduction to R (1.1)](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.1--Introduction-to-R.html)
 
 Please prepare before the session. Some parts should be familiar from the preparations; you can skip those. 
 
 ### Topic: Gathering data - Data extraction and data wrangling in RStudio
 * Handout: 
-+ (1.2) [R Text Analysis Quanteda](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/-1.2--R-Text-Analysis-Quanteda.md)
+  + [R Text Analysis Quanteda (1.2)](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/-1.2--R-Text-Analysis-Quanteda.md)
 
 We will work through this handout during the practical session. However, feel free to have a look already.
 
-## Week 6
+## Week 6 - Computational analysis I 
 
-(2.1) Exploratory Text Analysis ([link](https://htmlpreview.github.io/?https://github.com/mzamani2/R-for-BDSM/blob/master/tutorials/exploratory_text_analysis.html))
+### Topic: Topic modelling (unsupervised machine learning)
+* Handout: 
+  + [Exploratory Text Analysis (2.1)](https://htmlpreview.github.io/?https://github.com/mzamani2/R-for-BDSM/blob/master/tutorials/exploratory_text_analysis.html)
 
-Please prepare beforehand.
+Please prepare before the session.
 
-(2.2) Sentiment Analysis in R ([link](https://htmlpreview.github.io/?https://github.com/mzamani2/R_for_SMA/blob/master/tutorials/Tutorial%204%20-%2011%20May/Tutorial_4/sentiment_analysis_in_R.html))
+### Topic: Sentiment analysis 
+* Handout: 
+  + [Sentiment Analysis in R (2.2)](https://htmlpreview.github.io/?https://github.com/mzamani2/R_for_SMA/blob/master/tutorials/Tutorial%204%20-%2011%20May/Tutorial_4/sentiment_analysis_in_R.html)
+  
+We will work through this handout during the practical session. However, feel free to have a look already.
 
-## Week 7
+## Week 7 - Computational analysis II 
 
-(3.1) Basics of Data Visualization
-
-You will find this in the tutorial folder on github.
+### Topic: Visualisation of data and findings
+* Handout: 
+  + [Basics of Data Visualization (3.1)](add link)
+ 
 
 ## For more RStudio resources have a look at this GitHub page. ([Computational Communication Science Amsterdam](https://github.com/ccs-amsterdam/r-course-material))
 
