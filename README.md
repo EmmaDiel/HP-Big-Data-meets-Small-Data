@@ -13,15 +13,15 @@ Before our first practical session, ensure you downloaded RStudio on your laptop
 
 ## Week 5
 
-###Topic: Basic Introduction to RStudio
+### Topic: Basic Introduction to RStudio
 * Handout: 
-** (1.1) [Introduction to R](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.1--Introduction-to-R.html)
++ (1.1) [Introduction to R](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.1--Introduction-to-R.html)
 
 Please prepare before the session. Some parts should be familiar from the preparations; you can skip those. 
 
 Topic: Gathering data - Data extraction and data wrangling in RStudio
 * Handout: 
-** (1.2) [R Text Analysis Quanteda](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/-1.2--R-Text-Analysis-Quanteda.md)
++ (1.2) [R Text Analysis Quanteda](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/-1.2--R-Text-Analysis-Quanteda.md)
 
 We will work through this handout during the practical session. However, feel free to have a look already.
 
