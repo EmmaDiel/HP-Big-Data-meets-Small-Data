@@ -13,14 +13,17 @@ Before our first practical session, ensure you downloaded RStudio on your laptop
 
 ## Week 5
 
-(1.1) [Introduction to R](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.1--Introduction-to-R.html)
+###Topic: Basic Introduction to RStudio
+* Handout: 
+** (1.1) [Introduction to R](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.1--Introduction-to-R.html)
 
+Please prepare before the session. Some parts should be familiar from the preparations; you can skip those. 
 
-Please prepare beforehand.
+Topic: Gathering data - Data extraction and data wrangling in RStudio
+* Handout: 
+** (1.2) [R Text Analysis Quanteda](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/-1.2--R-Text-Analysis-Quanteda.md)
 
-(1.2) R Text Analysis Quanteda
-
-You will find this in the tutorial folder on github.
+We will work through this handout during the practical session. However, feel free to have a look already.
 
 ## Week 6
 
@@ -36,4 +39,10 @@ Please prepare beforehand.
 
 You will find this in the tutorial folder on github.
 
-## For more resources have a look at this page. ([link](https://github.com/ccs-amsterdam/r-course-material))
+## For more RStudio resources have a look at this GitHub page. ([Computational Communication Science Amsterdam](https://github.com/ccs-amsterdam/r-course-material))
+
+### Additional literature and resources 
+* Chapter 5 & 6 in [Computational Analysis of Communication](https://cssbook.net) by Van Atteveldt et al. (2022)
+* [Online book “R for Data Science”](https://r4ds.had.co.nz)
+* [Online book “Data Visualization” by Kieran Healy](https://socviz.co)
+* [Website “Data-To-Viz” (great overview on visualizations with code examples)](https://www.data-to-viz.com)
