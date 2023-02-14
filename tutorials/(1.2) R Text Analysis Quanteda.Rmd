@@ -3,7 +3,7 @@ title: "Big Data meets Small Data"
 subtitle: "R text analysis: quanteda"
 author: "Kasper Welbers, Wouter van Atteveldt & Philipp Masur"
 date: "2021-10"
-updates: "2022-02"
+updated: "2022-02"
 output: 
   github_document:
   #html_document:
