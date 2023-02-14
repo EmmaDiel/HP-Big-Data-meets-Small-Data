@@ -4,14 +4,11 @@ Here you can find the material used in the workgroup sessions for the Honors pro
 
 ## Preparations
 
-Before our first session make sure you have downloaded RStudio on your laptop and made yourself a bit familiar with the setup. These two outlines will be helpful to do so:
+Before our first practical session, ensure you downloaded RStudio on your laptop and familiarised yourself with the setup. These two outlines will help do so:
 
-[Installing R and RStudio](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/-1.1--Introduction-to-R.html)
+* [Installing R and RStudio](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/Preparation/R-basics---Installing-R.md)
 
-[R Basics](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/Preparation/R-basics---Getting-started.md)
-
-[R Basics](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/Preparation/R-basics---Getting-started.md)
-
+* [R Basics](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/Preparation/R-basics---Getting-started.md)
 
 
 ## Week 5
