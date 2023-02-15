@@ -539,9 +539,6 @@ You'll again have to copy (some) of the code, and change it for your own analysi
 
 > **Question 3.b**. Interpret the results. What terms were over-represented and under-represented? Does this help you get a quick idea of what the president talked about? How is this different from your observation in `2.c`?
 
-> **Question 3.c**. You work for OBI4wan to advise them on usefull tools in the dashboard for their users. They heard about this `keyness` thing, and are in doubt whether it is something that would be usefull. You are asked to look into this, and write a brief (+/- 200 word) evaluation. Specifically, you are asked to reflect on how this type of analysis is different from just looking at word frequencies in a wordcloud. 
-
-
 
 
 # Optional: better understanding R
