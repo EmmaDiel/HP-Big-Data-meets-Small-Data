@@ -507,7 +507,6 @@ recognize the general idea. We use the `textstat_keyness` function, which will c
 
 Next, we need to specify which texts in the corpus we want to compare to the other texts. In this example, we want to compare Obama to all other presidents. Before in the `dfm_subset` function we could simply say `President == "Obama"`, but in this function this is not allowed (sometimes, life is not perfect). Instead, we need to use the less elegant `docvars(m, "President") == "Obama"`. The difference is that now we need to explicitly tell R to look for the `President` column in the document variables for m (`docvars(m)`). 
 
-> Sidenote. As you see, it is not always staightforward *how* a function should be used. For this course you'll never have to figure this out by yourself, but you might be wondering how we know this. We provide an optional section at the bottom of this document explaining this. 
 
 You don't need to understand why the `textstat_keyness` function works this way, just that it does. So now let's visualize the results from the `textstat_keyness` function, using the `textplot_keyness` function. For sake of simplicity, we repeat the previous step, so that you see that the `textstat_keyness` and `textplot_keyness` functions work in tandem.
 
