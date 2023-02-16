@@ -21,7 +21,7 @@ Please prepare before the session. Some parts should be familiar from the prepar
 
 ### Topic: Gathering data - Data extraction and data wrangling in RStudio
 * Handout: 
-  + [R Text Analysis Quanteda (1.2)](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/-1.2--R-Text-Analysis-Quanteda.md)
+  + [R Text Analysis Quanteda (1.2)](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.2--R-Text-Analysis-Quanteda.md)
 
 We will work through this handout during the practical session. However, feel free to have a look already.
 
