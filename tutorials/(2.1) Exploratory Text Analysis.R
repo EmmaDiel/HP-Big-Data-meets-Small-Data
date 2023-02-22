@@ -12,10 +12,11 @@ toc_depth: 1
 editor_options:
   chunk_output_type: console
 ---
-  
-  
+
   ```{r opts, echo = FALSE}
+
 knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+
 ```
 
 VU Amsterdam

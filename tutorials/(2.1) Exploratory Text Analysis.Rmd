@@ -151,7 +151,7 @@ The semicolon format used by OBI4wan is actually also pretty common, and is ofte
 And for this second common standard, there is also the `read_csv2` function.
 
 ```{r}
-#vaccin_2021_04_08 = read_csv2(here::here("data/vaccin_2021_04_08.csv"))
+vaccin_2021_04_08 = read_csv2(here::here("data/vaccin_2021_04_08.csv"))
 ```
 
 So there's our one line of code solution!
@@ -179,10 +179,10 @@ That's not necessary, but it can't hurt either, and it makes it easier for you t
 library(dplyr)
 library(readr)   
 
-#d = bind_rows(
-#  read_csv2(here::here("Desktop/(2.1) Exploratory text analysis/vaccin_2021_04_06.csv")),
-#  read_csv2(here::here("Desktop/(2.1) Exploratory text analysis/vaccin_2021_04_07.csv")),
-#  read_csv2(here::here("Desktop/(2.1) Exploratory text analysis/vaccin_2021_04_08.csv")))
+d = bind_rows(
+  read_csv2(here::here("Data/vaccin_2021_04_06.csv")),
+  read_csv2(here::here("Data/vaccin_2021_04_07.csv")),
+  read_csv2(here::here("Data/vaccin_2021_04_08.csv")))
 ```
 
 Now we have a single data frame with 60.000 rows, where each row is a tweet.
@@ -215,9 +215,9 @@ library(quanteda)
 library(quanteda.textstats)   
 library(quanteda.textplots)
 
-#corp = corpus(d, text_field = 'Message')    
-#dtm = dfm(tokens(corp, remove_punct=T))     
-#dtm = dfm_remove(dtm, stopwords('en'))
+corp = corpus(d, text_field = 'Message')    
+dtm = dfm(tokens(corp, remove_punct=T))     
+dtm = dfm_remove(dtm, stopwords('en'))
 ```
 
 This time we're also stemming the data, as discussed in the video lecture.
@@ -228,7 +228,7 @@ affects your analyses. Later in this practical you will have to decide whether y
 will apply stemming on your own data.
                                                                                                              
 ```{r}
-#dtm = dfm_wordstem(dtm)
+dtm = dfm_wordstem(dtm)
 ```                                                                                             
 
 > **Question 1.a**. Create a wordcloud of this data with the `textplot_wordcloud` function, as you did last week. Use arguments (e.g., max_words, color) to make it a nice wordcloud. Paste the wordcloud in your answer document, and provide a brief interpretation of what the wordcloud tells you about the data.
@@ -310,7 +310,7 @@ We'll also remove words with only 2 characters of less (mainly to remove hard to
                                                                                                             
 ```{r}
                                                                                                   
-#dtm_trimmed = dfm_select(dtm, pattern='@*', selection='remove', min_nchar = 3)
+dtm_trimmed = dfm_select(dtm, pattern='@*', selection='remove', min_nchar = 3)
                                                                                                           
 ```                                                                                                             
                                                                                                             
@@ -318,14 +318,14 @@ Next, we'll filter our data so that we only use the 2500 most frequent words.
 We also remove all terms that occur in more than 50% of all documents, because terms that occur in almost all articles (such as 'vaccin', our search term) are not very informative.
 
 ```{r}
-#dtm_trimmed = dfm_trim(dtm_trimmed, min_termfreq = 2500, termfreq_type = 'rank', 
-#                                    max_docfreq = 0.5, docfreq_type='prop')
+dtm_trimmed = dfm_trim(dtm_trimmed, min_termfreq = 2500, termfreq_type = 'rank', 
+                                    max_docfreq = 0.5, docfreq_type='prop')
 ```
 
 So let's see what we have.
 
 ```{r}
-#dtm_trimmed
+dtm_trimmed
 ```
 
 We now have a DTM with 2516 unique terms (not exactly 2500 because some have the same rank). 
@@ -354,7 +354,7 @@ This will only require more time (but computer time is free), but for this examp
 set.seed(1)
 ```
 ```{r, results='hide', message=FALSE, warning=FALSE, cache=TRUE}
-#m = stm(dtm_trimmed, K=10, max.em.its = 20)
+m = stm(dtm_trimmed, K=10, max.em.its = 20)
 ```
 
 When this finishes you might get some harmless warnings mentioning `Dropped empty document(s)`.
@@ -376,7 +376,7 @@ To get a broad idea of what topics we found, we can plot the model.
 Here the only argument we give is `n = 5`, which simply means that for every topic we want to see 5 important words.
 
 ```{r stm_plot}
-#plot(m, n=5)
+plot(m, n=5)
 ```
 
 The topics in this plot are ordered by how 'big' they are in our corpus. 
@@ -392,7 +392,7 @@ Before we say that word clouds are a nice way to visualize which words are most 
 Let's use this to help us interpret topic 6.
 
 ```{r stm_cloud}
-#cloud(m, topic = 6, max.words = 25)
+cloud(m, topic = 6, max.words = 25)
 ```
 
 ## Wrap-up: a first look at topic models
