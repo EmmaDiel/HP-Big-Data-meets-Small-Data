@@ -29,7 +29,7 @@ We will work through this handout during the practical session. However, feel fr
 
 ### Topic: Topic modelling (unsupervised machine learning)
 * Handout: 
-  + [Exploratory Text Analysis (2.1)](https://htmlpreview.github.io/?https://github.com/mzamani2/R-for-BDSM/blob/master/tutorials/exploratory_text_analysis.html)
+  + [Exploratory Text Analysis (2.1)](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-2.1--Exploratory-Text-Analysis.md)
 
 Please prepare before the session.
 
