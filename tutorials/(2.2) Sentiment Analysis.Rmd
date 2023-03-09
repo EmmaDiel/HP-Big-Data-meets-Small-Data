@@ -1,5 +1,5 @@
 ---
-  title: 'Big Data Meets Small Data'
+title: 'Big Data Meets Small Data'
 subtitle: "Sentiment analysis in R"
 author: "Kasper Welbers"
 output:
