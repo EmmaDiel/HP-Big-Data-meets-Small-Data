@@ -15,10 +15,10 @@ editor_options:
 knitr::opts_chunk$set(message=FALSE, warning=FALSE)
 ```
 
-#Sentiment analysis in R
+# Sentiment analysis in R
 
 
-##VU Amsterdam
+## VU Amsterdam
 
 
 ## This tutorial
