@@ -35,7 +35,7 @@ Please prepare before the session.
 
 ### Topic: Sentiment analysis 
 * Handout: 
-  + [Sentiment Analysis in R (2.2)](https://htmlpreview.github.io/?https://github.com/mzamani2/R_for_SMA/blob/master/tutorials/Tutorial%204%20-%2011%20May/Tutorial_4/sentiment_analysis_in_R.html)
+  + [Sentiment Analysis in R (2.2)](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/-2.2--Sentiment-Analysis.md)
   
 We will work through this handout during the practical session. However, feel free to have a look already.
 

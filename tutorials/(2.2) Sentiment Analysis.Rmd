@@ -1,25 +1,25 @@
 ---
-title: 'Big Data Meets Small Data'
+title: "Big Data meets Small Data"
 subtitle: "Sentiment analysis in R"
 author: "Kasper Welbers"
-output:
+updated: "2022-02"
+output: 
   github_document:
-  theme: united
-highlight: tango
-css: custom.css
-#toc: true
-toc_depth: 1
-editor_options:
+  #html_document:
+  toc: yes
+editor_options: 
   chunk_output_type: console
 ---
   
-  ```{r opts, echo = FALSE}
+```{r opts, echo = FALSE}
 knitr::opts_chunk$set(message=FALSE, warning=FALSE)
 ```
 
-VU Amsterdam
+#
+##VU Amsterdam
+###Kasper Welbers
 
-# This tutorial
+## This tutorial
 
 In this tutorial you will develop a better intuition for the limitations of automatic sentiment analysis by taking a look under the hood of two general approaches for classifying texts into categories: rule-based and supervised machine learning. 
 As you'll see, these techniques can be applied for many more purposes than just sentiment analysis.
@@ -27,7 +27,7 @@ Supervised machine learning in particular has become a hugely important techniqu
 We won't dive that deep into the method, but you will see what it is, and even apply it yourself. 
 
 
-# Rule-based approach vs supervised machine learning
+## Rule-based approach vs supervised machine learning
 
 You worked with `unsupervised machine learning` in the previous tutorial, when you trained and interpreted a `topic model`. What set's this approach apart is that it does not require any supervision. 
 We simply gave our computer a bunch of texts, and it came up with useful patterns in the data (in this case topics).
