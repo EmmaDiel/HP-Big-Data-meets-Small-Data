@@ -3,7 +3,7 @@ title: 'Big Data Meets Small Data'
 subtitle: "Sentiment analysis in R"
 author: "Kasper Welbers"
 output:
-  html_document:
+  github_document:
   theme: united
 highlight: tango
 css: custom.css
