@@ -43,7 +43,7 @@ We will work through this handout during the practical session. However, feel fr
 
 ### Topic: Visualisation of data and findings
 * Handout: 
-  + [Basics of Data Visualization (3.1)](add link)
+  + [Basics of Data Visualization (3.1)](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-3.1--Basics-of-Data-Visualization.md)
  
 
 ## For more RStudio resources have a look at this GitHub page. ([Computational Communication Science Amsterdam](https://github.com/ccs-amsterdam/r-course-material))
