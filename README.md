@@ -1,6 +1,6 @@
 # HP-Big-Data-meets-Small-Data
 
-Here you can find the material used in the workgroup sessions for the Honors program course "Big Data meets Small Data" developed at the Vrije Universiteit Amsterdam. The course material can be accessed here: <https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data.git>
+Welcome to the Big Data part of this course! On this Github page you will find all the material (and additional resources) used in the workgroup sessions for the Honors program course "Big Data meets Small Data" at Vrije Universiteit Amsterdam. The course material can also be accessed here: <https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data.git>
 
 ## Preparations
 
@@ -10,6 +10,11 @@ Before our first practical session, ensure you downloaded RStudio on your laptop
 
 * [R Basics](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/Preparation/R-basics---Getting-started.md)
 
+## Week 4 - What is "Big Data"
+
+This week we will get started with some background information on big data. Please make sure that you have thought about the kind of data that would be helpful to investigate the societal issue available)
+
+You can find the slides here: 
 
 ## Week 5 - Getting started
 
