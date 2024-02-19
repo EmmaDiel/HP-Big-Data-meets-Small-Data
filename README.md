@@ -15,7 +15,7 @@ Before our first practical session, ensure you downloaded R and RStudio on your 
 ### Topic: Basic Introduction to RStudio
 
 -   Handout:
-    -   [Introduction to R (1.1)](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.1--Introduction-to-R.html)
+    -   [Introduction to R (5.0)](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.1--Introduction-to-R.html)
 
 Please prepare before the session. Some parts should be familiar from the preparations; you can skip those.
 

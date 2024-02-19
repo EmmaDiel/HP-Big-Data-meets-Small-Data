@@ -1,0 +1,167 @@
+---
+title: "WhatsApp analysis with RStudio"
+author: "Emma Diel"
+date: "2024-02-19"
+format: html
+editor: visual
+---
+---
+
+## Introduction
+Welcome! This handout will guide you through your first steps to get to know RStudio but also how to use resources to solve issues you encounter. To do this you will investigate your own WhatsApp chat. This handout will guide you through data extraction and uploading your data to your R Envrionement. After a first analysis together you are free to explore some more on your own. The endgoal of the handout is that you have at least three different visualisations of your WhatsApp analysis. 
+
+## Getting Data
+To get the data you will need to open the chat that you want to analyse. How this exactly works is a bit different depending on your phone. You should be able to find a "Export Chat" option once you selected a chat. If not, try to google this for your exact phone brand. 
+
+## Setting up your page
+At the end of your analysis, you will have some interesting insights and created compelling visualizations from your WhatsApp chat data. Naturally, you'll want to share these findings, especially with the person or people involved in the chat. One effective and professional way to do this is by using Quarto, an open-source scientific and technical publishing system that allows you to create dynamic and interactive documents, reports, presentations, and more.
+
+### Step 1: Install Quarto
+If you haven't already, you need to install Quarto. You can download it from the Quarto website (https://quarto.org/) and follow the installation instructions for your operating system.
+
+### Step 2: Create a New Quarto Document
+In RStudio: Go to File > New File > Quarto Document. Choose the type of output you want (e.g., HTML, PDF). For sharing online, HTML is recommended for its interactivity and accessibility. Save the file with a meaningful name, such as whatsapp_analysis.qmd.
+
+### Step 3: Start the analysis
+Now that we have set up our environment we can get started. This is a helpful overview for formatting your quarto file: https://quarto.org/docs/authoring/markdown-basics.html
+
+## Uploading the data to R 
+First, we will have to set the working directory, to where you have saved your WhatsApp chat file. 
+
+```{r, eval=FALSE}
+setwd("/Users/emmadiel/Desktop") # adjust accordingly
+```
+
+Next we will need to load the packages. If you use them for the first time you will need to install them first.
+
+```{r, eval=FALSE}
+#install.packages(rwhatsapp) 
+#install.packages(dplyr)
+library("rwhatsapp") 
+library("dplyr")
+```
+
+Now we can load the data into our R environment. 
+
+```{r, eval=FALSE}
+chat <- rwa_read("emma_chat.txt") %>% # make sure to adjust the file name
+  filter(!is.na(author)) # remove messages without author
+chat
+```
+
+## First analysis
+
+We can now start with the first analysis. How about we investigate the amount of messages that are send per day:
+
+```{r, eval=FALSE}
+library("ggplot2"); theme_set(theme_minimal())
+library("lubridate")
+chat %>%
+  mutate(day = date(time)) %>%
+  count(day) %>%
+  ggplot(aes(x = day, y = n)) +
+  geom_bar(stat = "identity") +
+  ylab("") + xlab("") +
+  ggtitle("Messages per day")
+```
+
+That was easy, great! Can you also figure out how the distribution of messages is per weekday? 
+
+To do this you will first need to do some recoding. Have a look at your data, do you have all the needed information, so do we already know what weekday each message is send? 
+
+```{r}
+#add your code here
+```
+
+Can you also manage to visualise the amount of weekday messages per person in the chat?
+
+```{r}
+#add your code here
+```
+
+## Functions
+
+When working with R it can be very helpful sometimes to work with functions. Functions are fundamental building blocks in R programming. Think of a function as a small, self-contained chunk of code designed to perform a specific task. When you "call" a function, you're asking R to execute that chunk of code. Functions can take inputs, process them, and return outputs. R comes with many built-in functions, and it also allows you to create your own, custom functions.
+
+Let's say we want to analyze the frequency of messages sent by each person in the WhatsApp chat. This analysis could help us understand who are the most active participants in the conversation. Below you will see a function called count_messages that takes the chat data as input and returns a summary of messages sent by each participant of the chat.
+
+```{r, eval=FALSE}
+count_messages <- function(chat) { 
+  return(chat %>%
+           group_by(author) %>% #make sure that this colums has the correct name
+           summarise(total_messages = n()) %>%
+           arrange(desc(total_messages)))
+} #The new function is created between the wiggle brackets
+```
+
+What exactly is happening here: This function uses dplyr from the tidyverse to group the data by sender, count the number of messages per sender (n()), and then arrange the senders by their message count in descending order.
+
+Now, we can use the count_messages function to analyze our chat data. Try it out!
+
+```{r, eval=FALSE}
+message_summary <- count_messages(chat)
+print(message_summary)
+```
+
+Can you come up with another function?
+
+```{r}
+#add your code here
+```
+
+## Further analysis
+
+Wouldn't it be interesting to see which ones are the most used emojis in your chat? Let's try this out! 
+
+```{r, eval=FALSE}
+library("tidyr")
+chat %>%
+  unnest(emoji) %>%
+  count(author, emoji, sort = TRUE) %>%
+  group_by(author) %>%
+  top_n(n = 6, n) %>%
+  ggplot(aes(x = reorder(emoji, n), y = n, fill = author)) +
+  geom_col(show.legend = FALSE) +
+  ylab("") +
+  xlab("") +
+  coord_flip() +
+  facet_wrap(~author, ncol = 2, scales = "free_y")  +
+  ggtitle("Most often used emojis")
+```
+
+Opsies! This seems to work but where are the emojis?? We can not see them as the default font in ggplot2 does not support emojis. But by moving emojis inside the plot instead, and using emoji images from Twitter we can amke it work. 
+
+```{r, eval=FALSE}
+library("ggimage")
+emoji_data <- rwhatsapp::emojis %>% # data built into package
+  mutate(hex_runes1 = gsub("\\s.*", "", hex_runes)) %>% # ignore combined emojis
+  mutate(emoji_url = paste0("https://abs.twimg.com/emoji/v2/72x72/", 
+                            tolower(hex_runes1), ".png"))
+
+chat %>%
+  unnest(emoji) %>%
+  count(author, emoji, sort = TRUE) %>%
+  group_by(author) %>%
+  top_n(n = 6, n) %>%
+  left_join(emoji_data, by = "emoji") %>% 
+  ggplot(aes(x = reorder(emoji, n), y = n, fill = author)) +
+  geom_col(show.legend = FALSE) +
+  ylab("") +
+  xlab("") +
+  coord_flip() +
+  geom_image(aes(y = n + 20, image = emoji_url)) +
+  facet_wrap(~author, ncol = 2, scales = "free_y") +
+  ggtitle("Most often used emojis") +
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank())
+```
+
+Do you understand what exactly is done here? No? Why not ask ChatGPT to explain the code to you. You can use the following prompt: Please explain me this chunk of code that I used for an analysis of my WhatsApp chat. Explain it to me line by line. 
+
+## Next steps
+
+What next? What do you think would be interesting to investigate? You are free to make use of any help that you might need. This means you can browse for creative solutions or try out ChatGPT when you are stuck. 
+
+```{r}
+
+```

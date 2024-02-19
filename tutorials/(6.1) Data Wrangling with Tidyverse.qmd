@@ -1,7 +1,7 @@
 ---
 title: "(6.1) Data Wrangling with Tidyverse"
 author: "Emma Diel"
-date: "15-02-2024"
+date: "2024-02-15"
 format: html
 editor: visual
 ---
@@ -21,7 +21,7 @@ Happy data wrangling!
 First, make sure you have installed the `tidyverse` package. If not, you can install it using the following command:
 
 ```{r}
-install.packages("tidyverse")
+#install.packages("tidyverse")
 ```
 
 Then, load the `tidyverse` package into your R session:
@@ -39,7 +39,7 @@ library(tidyverse)
 To select rows based on a condition:
 
 ```{r}
-filtered_data <- data %>% filter(column_name == "value")
+#filtered_data <- data %>% filter(column_name == "value")
 ```
 
 ### Selecting Columns
@@ -47,7 +47,7 @@ filtered_data <- data %>% filter(column_name == "value")
 To choose specific columns:
 
 ```{r}
-selected_data <- data %>% select(column1, column2)
+#selected_data <- data %>% select(column1, column2)
 ```
 
 ### Creating New Columns
@@ -55,7 +55,7 @@ selected_data <- data %>% select(column1, column2)
 To add or modify columns:
 
 ```{r}
-data_with_new_column <- data %>% mutate(new_column = column1 + column2)
+#data_with_new_column <- data %>% mutate(new_column = column1 + column2)
 ```
 
 ### Summarizing Data
@@ -63,7 +63,7 @@ data_with_new_column <- data %>% mutate(new_column = column1 + column2)
 To compute summary statistics:
 
 ```{r}
-summary_data <- data %>% summarise(mean_value = mean(column, na.rm = TRUE))
+#summary_data <- data %>% summarise(mean_value = mean(column, na.rm = TRUE))
 ```
 
 ## Reshaping Data with tidyr
@@ -75,13 +75,13 @@ summary_data <- data %>% summarise(mean_value = mean(column, na.rm = TRUE))
 -   Convert wide format to long format:
 
 ```{r}
-longer_data <- data %>% pivot_longer(cols = starts_with("prefix"), names_to = "category", values_to = "value")
+#longer_data <- data %>% pivot_longer(cols = starts_with("prefix"), names_to = "category", values_to = "value")
 ```
 
 -   Convert long format to wide format:
 
 ```{r}
-wider_data <- longer_data %>% pivot_wider(names_from = "category", values_from = "value")
+#wider_data <- longer_data %>% pivot_wider(names_from = "category", values_from = "value")
 ```
 
 ## Merging Data with dplyr
@@ -91,7 +91,7 @@ wider_data <- longer_data %>% pivot_wider(names_from = "category", values_from =
 -   Merge data based on common keys:
 
 ```{r}
-merged_data <- inner_join(data1, data2, by = "key_column")
+#merged_data <- inner_join(data1, data2, by = "key_column")
 ```
 
 ## Additional Topics
@@ -101,7 +101,7 @@ merged_data <- inner_join(data1, data2, by = "key_column")
 To group data and calculate summary statistics:
 
 ```{r}
-grouped_summary <- data %>% group_by(group_column) %>% summarise(mean_value = mean(value, na.rm = TRUE))
+#grouped_summary <- data %>% group_by(group_column) %>% summarise(mean_value = mean(value, na.rm = TRUE))
 ```
 
 ### Working with Strings using stringr
@@ -109,15 +109,20 @@ grouped_summary <- data %>% group_by(group_column) %>% summarise(mean_value = me
 `stringr` is part of `tidyverse` and simplifies string manipulation:
 
 ```{r}
-data %>% mutate(new_column = str_replace(column, "old_pattern", "new_pattern"))
+#data %>% mutate(new_column = str_replace(column, "old_pattern", "new_pattern"))
 ```
 
 ## Application Exercises
-#If you already have a data set your application exercise is to wrangle the data set in a way that you will need it for the type of analysis planned. That could mean, merging data sets, renaming variables or creating new variables. Good Luck!!
+If you already have a data set your application exercise is to wrangle the data set in a way that you will need it for the type of analysis planned. That could mean, merging data sets, renaming variables or creating new variables. Good Luck!!
 
-#If you are working with the Data set from Canvas:
+If you are working with the Data set from Canvas, you can go through these following exercises:
+
 1.  **Transform a Dataset**: Use `mutate()` to add a new column that is a function of existing columns.
+
 2.  **Reshape a Dataset**: Use `pivot_longer()` and `pivot_wider()` to reshape a given dataset.
+
 3.  **Merge Two Datasets**: Use `inner_join()` to combine two datasets.
+
 4.  **Group and Summarize**: Apply `group_by()` and `summarise()` to calculate summary statistics.
+
 5.  **String Manipulation**: Employ `stringr` functions to manipulate strings within a dataset.
