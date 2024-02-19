@@ -19,17 +19,17 @@ Before our first practical session, ensure you downloaded R and RStudio on your 
 
 Please prepare before the session. Some parts should be familiar from the preparations; you can skip those.
 
-### Topic: WhatsApp Analysis with RStudio
+### Topic: Introduction to R with quarto, functions and a WhatsApp analysis
 
 -   Handout:
-    -   [XXXX](add link)
+    -   [WhatsApp Analysis with RStudio (5.1)](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/(5.1)%20WhatsApp%20Analysis%20with%20RStudio.html)
 
 ## Week 6 - Data Wrangling
 
 ### Topic: Tidyverse
 
 -   Handout:
-    -   [Data Wrangling with Tidyverse (6.1)](add link)
+    -   [Data Wrangling with Tidyverse (6.1)](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/(6.1)%20Data%20Wrangling%20with%20Tidyverse.html)
 
 ### Topic: Text analysis (with Quanteda)
 
