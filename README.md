@@ -12,13 +12,6 @@ Before our first practical session, ensure you downloaded R and RStudio on your 
 
 ## Week 5 - Introduction to RStudio
 
-### Topic: Basic Introduction to RStudio
-
--   Handout:
-    -   [Introduction to R (5.0)](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.1--Introduction-to-R.html)
-
-Please prepare before the session. Some parts should be familiar from the preparations; you can skip those.
-
 ### Topic: Introduction to R with quarto, functions and a WhatsApp analysis
 
 -   Handout:

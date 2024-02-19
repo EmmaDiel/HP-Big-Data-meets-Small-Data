@@ -8,7 +8,7 @@ editor: visual
 ---
 
 ## Introduction
-Welcome! This handout will guide you through your first steps to get to know RStudio but also how to use resources to solve issues you encounter. To do this you will investigate your own WhatsApp chat. This handout will guide you through data extraction and uploading your data to your R Envrionement. After a first analysis together you are free to explore some more on your own. The endgoal of the handout is that you have at least three different visualisations of your WhatsApp analysis. 
+Welcome! This handout will guide you through your first steps to get to know RStudio but also how to use resources to solve issues you encounter. To do this you will investigate your own WhatsApp chat. This handout will guide you through data extraction and uploading your data to your R Environment. After a first analysis together you are free to explore some more on your own. The end goal of the handout is that you have at least three different visualizations of your WhatsApp analysis. 
 
 ## Getting Data
 To get the data you will need to open the chat that you want to analyse. How this exactly works is a bit different depending on your phone. You should be able to find a "Export Chat" option once you selected a chat. If not, try to google this for your exact phone brand. 
