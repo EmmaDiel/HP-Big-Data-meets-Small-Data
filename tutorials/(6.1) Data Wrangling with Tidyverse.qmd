@@ -1,0 +1,123 @@
+---
+title: "(6.1) Data Wrangling with Tidyverse"
+author: "Emma Diel"
+date: "15-02-2024"
+format: html
+editor: visual
+---
+
+
+# Introduction
+
+Welcome to this tutorial on data wrangling in R using the `tidyverse` package. Designed for both beginners and intermediate users, this session focuses on transforming, reshaping, and merging data—key skills in data manipulation. We will also explore additional topics that are essential for effective data analysis.
+
+The exercises in this tutorial are intentionally open-ended to encourage you to apply what you learn to your datasets. This approach is designed to enhance your learning experience by allowing you to tackle real-world data challenges directly. If you're unsure where to start or need data for practice, we've provided a selection of datasets on Canvas. You can find these resources in the "Data for R Tutorials" module, which will help you get started on the exercises.
+
+Happy data wrangling!
+
+
+## Setting Up
+
+First, make sure you have installed the `tidyverse` package. If not, you can install it using the following command:
+
+```{r}
+install.packages("tidyverse")
+```
+
+Then, load the `tidyverse` package into your R session:
+
+```{r}
+library(tidyverse)
+```
+
+## Transforming Data with dplyr
+
+`dplyr` provides a suite of tools for efficiently manipulating datasets.
+
+### Filtering Rows
+
+To select rows based on a condition:
+
+```{r}
+filtered_data <- data %>% filter(column_name == "value")
+```
+
+### Selecting Columns
+
+To choose specific columns:
+
+```{r}
+selected_data <- data %>% select(column1, column2)
+```
+
+### Creating New Columns
+
+To add or modify columns:
+
+```{r}
+data_with_new_column <- data %>% mutate(new_column = column1 + column2)
+```
+
+### Summarizing Data
+
+To compute summary statistics:
+
+```{r}
+summary_data <- data %>% summarise(mean_value = mean(column, na.rm = TRUE))
+```
+
+## Reshaping Data with tidyr
+
+`tidyr` helps you tidy your data, ensuring each variable is a column, and each observation is a row.
+
+### Pivot Longer and Pivot Wider
+
+-   Convert wide format to long format:
+
+```{r}
+longer_data <- data %>% pivot_longer(cols = starts_with("prefix"), names_to = "category", values_to = "value")
+```
+
+-   Convert long format to wide format:
+
+```{r}
+wider_data <- longer_data %>% pivot_wider(names_from = "category", values_from = "value")
+```
+
+## Merging Data with dplyr
+
+### Join Functions
+
+-   Merge data based on common keys:
+
+```{r}
+merged_data <- inner_join(data1, data2, by = "key_column")
+```
+
+## Additional Topics
+
+### Grouping and Summarizing
+
+To group data and calculate summary statistics:
+
+```{r}
+grouped_summary <- data %>% group_by(group_column) %>% summarise(mean_value = mean(value, na.rm = TRUE))
+```
+
+### Working with Strings using stringr
+
+`stringr` is part of `tidyverse` and simplifies string manipulation:
+
+```{r}
+data %>% mutate(new_column = str_replace(column, "old_pattern", "new_pattern"))
+```
+
+## Application Exercises
+#If you already have a data set your application exercise is to wrangle the data set in a way that you will need it for the type of analysis planned. That could mean, merging data sets, renaming variables or creating new variables. Good Luck!!
+
+#If you are working with the Data set from Canvas:
+1.  **Transform a Dataset**: Use `mutate()` to add a new column that is a function of existing columns.
+2.  **Reshape a Dataset**: Use `pivot_longer()` and `pivot_wider()` to reshape a given dataset.
+3.  **Merge Two Datasets**: Use `inner_join()` to combine two datasets.
+4.  **Group and Summarize**: Apply `group_by()` and `summarise()` to calculate summary statistics.
+5.  **String Manipulation**: Employ `stringr` functions to manipulate strings within a dataset.
