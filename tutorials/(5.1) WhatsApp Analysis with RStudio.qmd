@@ -51,7 +51,7 @@ chat
 
 One of the first hurdles you might face is related to setting the correct working directory. This might seem minor, but it's a crucial step because R needs to know where to look for your data files and scripts. A simple mistake, like a mis-capitalization in the path, can cause unexpected errors. For instance, if R can't find your file because the working directory isn't set correctly, you might see an error message like Error in file(file, "rt") : cannot open the connection. This essentially means R is looking in the wrong place and can't find the data file you're trying to use.
 
-To avoid this, it's important to manually set your working directory right from the start. You can do this in RStudio by going to the "Session" menu, selecting "Set Working Directory", and then choosing "Choose Directory". This allows you to navigate to and select the folder where your project's files are located, ensuring R knows exactly where to find them. By taking this step, you help prevent path-related errors and set yourself up for a smoother R programming experience.
+To avoid this, it's important to manually set your working directory right from the start. You can do this in RStudio by going to the "Session" menu, selecting "Set Working Directory", and then choosing "Choose Directory". This allows you to navigate to and select the folder where your project's files are located, ensuring R knows exactly where to find them. By taking this step, you help prevent path-related errors and set yourself up for a smoother R programming experience. 
 
 ## First analysis
 
