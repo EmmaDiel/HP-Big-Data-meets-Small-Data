@@ -21,13 +21,16 @@ Before our first practical session, ensure you downloaded R and RStudio on your 
 
 ### Topic: Tidyverse
 
--   Handout:
+-   A more general Handout:
     -   [Data Wrangling with Tidyverse (6.1)](https://htmlpreview.github.io/?https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/(6.1)%20Data%20Wrangling%20with%20Tidyverse.html)
+
+- Handout:
+    -   [R Tidyverse: Data transformation (6.2)](https://github.com/ccs-amsterdam/r-course-material/blob/master/tutorials/R-tidy-5-transformation.md)
 
 ### Topic: Text analysis (with Quanteda)
 
 -   Handout:
-    -   [R Text Analysis Quanteda (6.2)](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.2--R-Text-Analysis-Quanteda.md)
+    -   [R Text Analysis Quanteda (6.3)](https://github.com/EmmaDiel/HP-Big-Data-meets-Small-Data/blob/main/tutorials/-1.2--R-Text-Analysis-Quanteda.md)
 
 
 ## Week 7 - Statistical tests & Data visualisation
